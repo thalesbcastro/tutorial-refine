@@ -12,6 +12,7 @@ import {
     FilterDropdown,
     Space,
     EditButton,
+    DeleteButton,
 } from "@pankod/refine";
 
 import { IPost, ICategory, IUser } from "../../interface";
@@ -131,6 +132,11 @@ export const PostList: React.FC = () => {
                                     hideText
                                 />
                                 <EditButton
+                                    size="small"
+                                    recordItemId={record.id}
+                                    hideText
+                                />
+                                <DeleteButton
                                     size="small"
                                     recordItemId={record.id}
                                     hideText
