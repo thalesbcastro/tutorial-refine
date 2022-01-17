@@ -6,6 +6,7 @@ import "@pankod/refine/dist/styles.min.css";
 
 import { PostList } from "./pages/posts/list";
 import { PostShow } from "./pages/posts/show";
+import { PostEdit } from "./pages/posts/edit";
 
 const App: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       // Resources representa os endpoints de uma API. E "name" representa todo
       // resource simples que deveria dar match em um dos endpoints da API.
-      resources={[{ name: "posts", list: PostList, show: PostShow }]}
+      resources={[{ name: "posts", list: PostList, show: PostShow, edit: PostEdit }]}
     />
   );
 };
