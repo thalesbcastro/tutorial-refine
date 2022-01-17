@@ -8,6 +8,7 @@ import {
     useTable,
     Select,
     useSelect,
+    ShowButton,
     FilterDropdown,
 } from "@pankod/refine";
 
@@ -115,6 +116,19 @@ export const PostList: React.FC = () => {
                             />
                         </FilterDropdown>
                     )}
+                />
+                <Table.Column<IPost>
+                    title="Actions"
+                    dataIndex="actions"
+                    render={(_text, record): React.ReactNode => {
+                        return (
+                            <ShowButton
+                                size="small"
+                                recordItemId={record.id}
+                                hideText
+                            />
+                        )
+                    }}
                 />
             </Table>
         </List>
